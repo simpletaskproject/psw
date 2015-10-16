@@ -1,0 +1,149 @@
+/*MAIN SETTINGS*/
+html {
+  font-family: "Elena Web Basic", "minion pro", "minion", "Palatino", "Times New Roman", "Times", sans-serif;
+}
+
+body {
+  position: relative;
+  padding-top: 50px;
+  font-family: 'Alegreya';
+}
+
+.main-container {
+
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+
+.transparent-gbackground {
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+}
+
+.segment {
+  position: relative;
+  color:black;
+}
+
+.segment:after {
+  background-size: cover;
+
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+@media screen and (min-width: 1300px) {
+  #Home:after {
+    background-position: 0 0px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .segment-title {
+    height: calc(100vh - 50px);
+    min-height: 750px;
+    width: 100vw;
+    max-width: 100%;
+    position: relative;
+    color: black;
+  }
+}
+
+.segment-title:after {
+  background-size: cover;
+
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.title {
+  font-size:56px;
+}
+
+.title-logo {
+  display: block;
+  width: 12vw;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.segment-relative:after {
+  background-size: cover;
+
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+#Home:after {
+  background-image: url(assets/images/background_home.jpg);
+  filter: grayscale(45%) brightness(50%);
+  -webkit-filter: grayscale(45%) brightness(50%);
+  opacity: 1;
+}
+
+#Prezentacje {
+  color: black;
+}
+
+#Prezentacje:after {
+  background-color: #170B3B;
+  filter: grayscale(70%) brightness(90%);
+  -webkit-filter: grayscale(85%) brightness(80%);
+  opacity: 1.00;
+}
+
+#Warsztaty:after {
+  background-image: url(assets/images/background_warsztaty.jpg);
+  filter: grayscale(85%) brightness(35%);
+  -webkit-filter: grayscale(85%) brightness(35%);
+  opacity: 1.0;
+}
+
+#Plan:after {
+  background-color: #170B3B;
+  filter: grayscale(70%) brightness(90%);
+  -webkit-filter: grayscale(85%) brightness(80%);
+  opacity: 1.00;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.text-box {
+  text-shadow: 0px 0px 3px #202020 , -1px -1px #202020, 1px 1px #202020 ;
+  color: #D8D8D8  ;
+  padding: 0;
+  margin: 15px 0 15px 0;
+  position: relative;
+  line-height: 1.3;
+}
+
+@media screen and (device-aspect-ratio: 3/4) {
+  #Home:after {
+    background-position: 0 0px !important;
+  }
+
+  .title-logo {
+    width: 8vw !important;
+  }
+}
