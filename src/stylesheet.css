@@ -95,6 +95,11 @@ a, a:link, a:visited, a:hover, a:active {
 
 #Home:after {
   background-image: url(assets/images/background_home.jpg);
+  /*background-size: 100px 100px;*/
+  /*background-repeat: no-repeat;*/
+  /*padding: 100px;*/
+  /*background-origin: content-box;*/
+  /*background-position: center;*/
   filter: grayscale(45%) brightness(50%);
   -webkit-filter: grayscale(45%) brightness(50%);
   opacity: 1;
@@ -146,4 +151,42 @@ h2 {
   .title-logo {
     width: 8vw !important;
   }
+}
+
+/*CSS lista 2*/
+.custom-button {
+  border-radius: 5px;
+  background: linear-gradient(rgba(0,20,200,0.7), hsla(120, 100%, 75%, 0.5));
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.columns {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  -webkit-column-rule: 4px outset #90C3D4;
+}
+
+.animate-me {
+  transition: all linear 0.3s;
+}
+
+.animate-me:hover {
+  transform: translateY(20%) translateX(20%) scale(1.2, 1.2) rotate(7deg);
+}
+
+.animation {
+  animation: myanimation 5s infinite;
+}
+
+@keyframes myanimation {
+  0%   {top: 0px; left: 0px; background: red;}
+  25%  {top: 0px; left: 10px; background: blue;}
+  50%  {top: 10px; left: 10px; background: yellow;}
+  75%  {top: 10px; left: 0px; background: green;}
+  100% {top: 0px; left: 0px; background: red;}
 }
