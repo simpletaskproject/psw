@@ -3,7 +3,7 @@
 
     // start closure
     (function() {
-      var scrollToID, isMobile;
+      var scrollToID;
 
       scrollToID = function(id) {
         $("html, body").animate({
@@ -13,12 +13,13 @@
         });
       };
 
-      isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+      window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
-      if (!isMobile) {
+      if (!window.isMobile) {
         $('a.smart-link').click(function(e) {
           var hash;
           e.preventDefault();
+          e.stopPropagation();
           hash = $(this).attr('href');
           hash = hash.substr(1, hash.length);
           scrollToID(hash);
@@ -35,6 +36,27 @@
       }
 
     })(); // end closure
+
+    document.getElementById("plan-konf").addEventListener("click", function(event) {
+      event.stopPropagation();
+      window.alert("I was here");
+      console.log(this);
+      this.classList.add("animation") ;
+    });
+
+    window.addEventListener("click", function(event) {
+      var number = prompt("Please add number");
+      if(parseInt(number)) {
+        window.alert(number);
+      } else {
+        window.alert("It's not a number");
+      }
+    });
+
+    document.getElementById("button-event").addEventListener("click", function(event) {
+      event.stopPropagation();
+      window.alert(parseFloat(Math.floor(Math.random()*100)));
+    });
 
   });
 }).call(this);

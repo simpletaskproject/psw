@@ -95,8 +95,8 @@ a, a:link, a:visited, a:hover, a:active {
 
 #Home:after {
   background-image: url(assets/images/background_home.jpg);
-  /*background-size: 100px 100px;*/
-  /*background-repeat: no-repeat;*/
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
   /*padding: 100px;*/
   /*background-origin: content-box;*/
   /*background-position: center;*/
